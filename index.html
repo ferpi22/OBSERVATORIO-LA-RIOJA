@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiojaLandia Observatorio</title>
+    <!-- Leaflet para el Mapa Interactivo -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Paleta Violeta Pastel y Diseño UI/UX Moderno */
+        :root {
+            --bg-body: #f7f3fb;
+            --bg-sidebar: #eae0f5;
+            --bg-card: #ffffff;
+            --primary: #a881d2;
+            --primary-hover: #9161c4;
+            --accent: #d4bbed;
+            --text-dark: #3a2e4a;
+            --text-muted: #7a6b8c;
+            --shadow: 0 10px 25px rgba(168, 129, 210, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        body { display: flex; height: 100vh; background-color: var(--bg-body); color: var(--text-dark); overflow: hidden; }
+
+        /* Panel Lateral (Sidebar) */
+        .sidebar { width: 260px; background-color: var(--bg-sidebar); padding: 30px 20px; display: flex; flex-direction: column; gap: 15px; border-right: 1px solid #dcd0ea; z-index: 10; }
+        .sidebar h1 { font-size: 1.4rem; font-weight: 700; color: var(--text-dark); margin-bottom: 30px; text-align: center; letter-spacing: -0.5px; }
+        
+        .nav-btn { background-color: transparent; border: 1px solid transparent; padding: 14px 20px; border-radius: 12px; cursor: pointer; font-size: 0.95rem; font-weight: 600; color: var(--text-muted); transition: var(--transition); text-align: left; display: flex; align-items: center; gap: 10px; }
+        .nav-btn:hover { background-color: rgba(255,255,255,0.5); color: var(--primary-hover); transform: translateX(5px); }
+        .nav-btn.active { background-color: var(--bg-card); color: var(--primary-hover); box-shadow: var(--shadow); border: 1px solid #fff; transform: translateX(5px); }
+
+        /* Contenido Principal */
+        .main-content { flex: 1; display: flex; flex-direction: column; padding: 30px; gap: 25px; overflow-y: auto; }
+        
+        /* Cabecera del Dashboard */
+        .header { display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); padding: 20px 30px; border-radius: 20px; box-shadow: var(--shadow); }
+        .header-title h2 { font-size: 1.5rem; color: var(--text-dark); }
+        .header-title p { font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; }
+        
+        .update-panel { text-align: right; }
+        .update-status { font-size: 0.85rem; font-weight: 600; padding: 6px 12px; border-radius: 20px; display: inline-block; margin-bottom: 5px; }
+        .status-ok { background-color: #e5f7ed; color: #2ea05d; }
+        .status-old { background-color: #ffeaea; color: #d93838; }
+        .force-btn { background-color: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: var(--transition); }
+        .force-btn:hover { background-color: var(--primary-hover); }
+
+        /* Tarjetas de Indicadores (KPIs) */
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .kpi-card { background: var(--bg-card); padding: 25px; border-radius: 20px; box-shadow: var(--shadow); transition: var(--transition); border-bottom: 4px solid var(--accent); }
+        .kpi-card:hover { transform: translateY(-5px); border-bottom-color: var(--primary); }
+        .kpi-title { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 10px; }
+        .kpi-value { font-size: 2rem; font-weight: 700; color: var(--text-dark); }
+        .kpi-trend { font-size: 0.8rem; color: #2ea05d; margin-top: 8px; font-weight: 600; }
+
+        /* Contenedor del Mapa */
+        .map-container { flex: 1; background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); min-height: 400px; position: relative; border: 4px solid var(--bg-card); }
+        #map { width: 100%; height: 100%; border-radius: 16px; }
+
+        /* Custom Popup Leaflet */
+        .leaflet-popup-content-wrapper { background-color: var(--bg-card); color: var(--text-dark); border-radius: 12px; box-shadow: var(--shadow); }
+        .leaflet-popup-content { font-family: 'Inter', sans-serif; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <!-- Panel Lateral -->
+    <div class="sidebar">
+        <h1>RiojaLandia<br><span style="font-size: 0.9rem; font-weight: 400; color: var(--text-muted);">Observatorio</span></h1>
+        <button class="nav-btn active" onclick="loadSection('poblacion')">👥 Población</button>
+        <button class="nav-btn" onclick="loadSection('salud')">🏥 Salud Pública</button>
+        <button class="nav-btn" onclick="loadSection('produccion')">⚙️ Producción y Minería</button>
+        <button class="nav-btn" onclick="loadSection('clima')">⛅ Clima y Ambiente</button>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <!-- Cabecera -->
+        <div class="header">
+            <div class="header-title">
+                <h2 id="view-title">Población</h2>
+                <p id="view-desc">Indicadores demográficos actuales de La Rioja.</p>
+            </div>
+            <div class="update-panel">
+                <div id="update-badge" class="update-status status-ok">Datos Actualizados</div><br>
+                <button class="force-btn" onclick="forceUpdate()">Actualizar Ahora</button>
+            </div>
+        </div>
+
+        <!-- Tarjetas (KPIs) -->
+        <div class="kpi-grid" id="kpi-container">
+            <!-- Renderizado Dinámico -->
+        </div>
+
+        <!-- Mapa -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- Scripts de Funcionalidad -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // --- 1. CONFIGURACIÓN DEL MAPA ---
+        const map = L.map('map').setView([-29.413454, -66.856458], 7);
+        // Mapa base con colores claros que combinan con el violeta
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap',
+            maxZoom: 18
+        }).addTo(map);
+
+        let mapMarkers = [];
+
+        // --- 2. BASE DE DATOS (Simulación de API con datos reales de La Rioja) ---
+        const observatorioData = {
+            poblacion: {
+                title: "Población y Demografía",
+                desc: "Datos basados en el último censo y proyecciones del INDEC.",
+                kpis: [
+                    { title: "Población Total", value: "384.607", trend: "+2.1% anual" },
+                    { title: "Densidad", value: "4,3 hab/km²", trend: "Estable" },
+                    { title: "Población Urbana", value: "85%", trend: "+1.2% urbanización" }
+                ],
+                markers: [
+                    { lat: -29.4134, lng: -66.8564, text: "La Rioja Capital: 214.263 hab." },
+                    { lat: -29.1635, lng: -67.4963, text: "Chilecito: 49.432 hab." },
+                    { lat: -30.3475, lng: -66.3158, text: "Chamical: 14.160 hab." }
+                ]
+            },
+            salud: {
+                title: "Salud Pública",
+                desc: "Infraestructura sanitaria y métricas hospitalarias provinciales.",
+                kpis: [
+                    { title: "Hospitales Públicos", value: "34", trend: "En funcionamiento" },
+                    { title: "Centros de Atención Primaria", value: "186", trend: "Cobertura provincial" },
+                    { title: "Camas Operativas", value: "1.250", trend: "Ocupación actual: 62%" }
+                ],
+                markers: [
+                    { lat: -29.4150, lng: -66.8500, text: "Hospital Regional Enrique Vera Barros (Nivel 8)" },
+                    { lat: -29.4300, lng: -66.8600, text: "Hospital de la Madre y el Niño" },
+                    { lat: -29.1600, lng: -67.5000, text: "Hospital Eleázar Herrera Motta (Chilecito)" }
+                ]
+            },
+            produccion: {
+                title: "Producción y Minería",
+                desc: "Indicadores económicos, parque industrial y proyectos extractivos.",
+                kpis: [
+                    { title: "Empresas Industriales", value: "142", trend: "+5 radicaciones recientes" },
+                    { title: "Proyectos Mineros", value: "12", trend: "Exploración litio/cobre" },
+                    { title: "Exportaciones (Millones USD)", value: "$210M", trend: "+8.4% vs año anterior" }
+                ],
+                markers: [
+                    { lat: -29.4500, lng: -66.8200, text: "Parque Industrial La Rioja" },
+                    { lat: -28.3200, lng: -68.5500, text: "Proyecto Minero Peñas Negras (Cobre/Oro)" },
+                    { lat: -29.0000, lng: -67.5000, text: "Zona Producción Vitivinícola y Olivícola" }
+                ]
+            },
+            clima: {
+                title: "Clima y Ambiente",
+                desc: "Estaciones meteorológicas y condiciones ambientales actuales.",
+                kpis: [
+                    { title: "Temperatura Promedio", value: "24°C", trend: "Clima semiárido" },
+                    { title: "Precipitación Anual", value: "300 mm", trend: "-5% vs promedio histórico" },
+                    { title: "Parques Eólicos", value: "Arauko", trend: "150 MW generados" }
+                ],
+                markers: [
+                    { lat: -29.3800, lng: -66.8100, text: "Aeropuerto Almirante Brown - Estación Meteorológica" },
+                    { lat: -28.6667, lng: -66.7833, text: "Parque Eólico Arauco" }
+                ]
+            }
+        };
+
+        // --- 3. LÓGICA DE ACTUALIZACIÓN (15 DÍAS) ---
+        function checkDataFreshness() {
+            const lastUpdateKey = 'riojalandia_update_date';
+            let lastDateStr = localStorage.getItem(lastUpdateKey);
+            const today = new Date();
+            const badge = document.getElementById('update-badge');
+
+            if (!lastDateStr) {
+                // Primera vez que se abre la app
+                localStorage.setItem(lastUpdateKey, today.toISOString());
+                lastDateStr = today.toISOString();
+            }
+
+            const lastDate = new Date(lastDateStr);
+            const diffTime = Math.abs(today - lastDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            if (diffDays >= 15) {
+                badge.className = "update-status status-old";
+                badge.innerText = `Datos desactualizados (Hace ${diffDays} días). Actualizando...`;
+                
+                // Simulación de delay de API
+                setTimeout(() => {
+                    localStorage.setItem(lastUpdateKey, today.toISOString());
+                    badge.className = "update-status status-ok";
+                    badge.innerText = "Datos Actualizados Automáticamente";
+                }, 2000);
+            } else {
+                badge.className = "update-status status-ok";
+                badge.innerText = `Datos Actualizados (Próx. revisión en ${15 - diffDays} días)`;
+            }
+        }
+
+        function forceUpdate() {
+            localStorage.setItem('riojalandia_update_date', new Date().toISOString());
+            const badge = document.getElementById('update-badge');
+            badge.className = "update-status status-ok";
+            badge.innerText = "Sincronización forzada exitosa";
+            
+            // Efecto visual de recarga
+            const currentActive = document.querySelector('.nav-btn.active');
+            if(currentActive) currentActive.click();
+        }
+
+        // --- 4. RENDERIZADO DE LA INTERFAZ ---
+        function loadSection(sectionKey) {
+            // Actualizar estado activo de botones
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const data = observatorioData[sectionKey];
+            
+            // Renderizar Textos
+            document.getElementById('view-title').innerText = data.title;
+            document.getElementById('view-desc').innerText = data.desc;
+
+            // Renderizar KPIs
+            const kpiContainer = document.getElementById('kpi-container');
+            kpiContainer.innerHTML = '';
+            data.kpis.forEach(kpi => {
+                kpiContainer.innerHTML += `
+                    <div class="kpi-card">
+                        <div class="kpi-title">${kpi.title}</div>
+                        <div class="kpi-value">${kpi.value}</div>
+                        <div class="kpi-trend">${kpi.trend}</div>
+                    </div>
+                `;
+            });
+
+            // Renderizar Mapa
+            mapMarkers.forEach(marker => map.removeLayer(marker));
+            mapMarkers = [];
+
+            // Icono personalizado violeta para Leaflet
+            const violetIcon = new L.Icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+
+            const group = new L.featureGroup();
+
+            data.markers.forEach(item => {
+                const marker = L.marker([item.lat, item.lng], {icon: violetIcon})
+                                .bindPopup(item.text)
+                                .addTo(map);
+                mapMarkers.push(marker);
+                group.addLayer(marker);
+            });
+
+            // Ajustar vista del mapa para que se vean todos los pines
+            if(mapMarkers.length > 0) {
+                map.fitBounds(group.getBounds(), {padding: [50, 50], maxZoom: 10});
+            } else {
+                map.setView([-29.413454, -66.856458], 7);
+            }
+        }
+
+        // --- 5. INICIALIZACIÓN ---
+        window.onload = () => {
+            checkDataFreshness();
+            // Simular clic en el primer botón para cargar datos iniciales
+            const firstBtn = document.querySelector('.nav-btn');
+            firstBtn.click();
+        };
+    </script>
+</body>
+</html>
