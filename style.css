@@ -126,7 +126,95 @@ body { display: flex; height: 100vh; background-color: var(--bg-main); color: va
 .close-btn { background: rgba(255,255,255,0.2); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; transition: 0.2s; }
 .close-btn:hover { background: #ff4757; }
 
+/* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
     .dashboard-layout { grid-template-columns: 1fr; height: auto; }
     .map-wrapper { height: 500px; }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        order: 2; /* Sidebar goes to bottom */
+        width: 100%;
+        height: auto;
+        padding: 0;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+        z-index: 9999;
+    }
+    
+    .logo { display: none; }
+    .update-info { display: none; }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+    
+    .nav-links li {
+        flex: 1;
+        margin: 0;
+        padding: 12px 0;
+        border-radius: 0;
+        justify-content: center;
+        font-size: 0.7rem;
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+    
+    .nav-links li i { font-size: 1.3rem; margin: 0; }
+    
+    .nav-links li.active {
+        background-color: transparent;
+        color: var(--primary-dark);
+        box-shadow: inset 0 4px 0 var(--primary);
+        border-radius: 0;
+    }
+    
+    .content {
+        order: 1;
+        padding: 20px 15px;
+        padding-bottom: 90px; /* Space for the bottom navbar */
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    .hero { padding: 30px 20px; }
+    .hero h1 { font-size: 1.8rem; }
+    .hero p { font-size: 0.95rem; }
+    
+    .quick-stats { grid-template-columns: 1fr; }
+    
+    .dashboard-layout { gap: 20px; }
+    
+    .map-wrapper { height: 60vh; min-height: 400px; }
+    
+    .data-panel { padding: 20px 15px; }
+    .panel-header h2 { font-size: 1.4rem; }
+    
+    .gender-split { flex-direction: column; }
+    .eco-grid { grid-template-columns: 1fr 1fr; }
+    
+    .maps-gallery { grid-template-columns: 1fr; }
+    
+    .modal-content.image-viewer { max-width: 95vw; }
+}
+
+@media (max-width: 480px) {
+    .eco-grid { grid-template-columns: 1fr; } /* Stack economy cards on very small phones */
 }

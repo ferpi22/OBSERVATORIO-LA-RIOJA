@@ -8,21 +8,12 @@ const deptoData = {
         "varones_val": "102.173 Varones",
         "mujeres_pct": "51,7%",
         "mujeres_val": "109.478 Mujeres",
-        "edades": [
-            21.6,
-            27.5,
-            42.7,
-            8.2
-        ],
+        "edades": [21.6, 27.5, 42.7, 8.2],
         "pea": "111.072",
         "ocupados": "102.806",
         "desoc": "7.4%",
         "jub": "82.1%",
-        "edu": [
-            12.1,
-            27.1,
-            16.7
-        ],
+        "edu": [12.1, 27.1, 16.7],
         "hogares": "70.016",
         "pobreza": "6.8%"
     },
@@ -33,21 +24,12 @@ const deptoData = {
         "varones_val": "8.037 Varones",
         "mujeres_pct": "50,6%",
         "mujeres_val": "8.220 Mujeres",
-        "edades": [
-            23.1,
-            26.1,
-            41.3,
-            9.4
-        ],
+        "edades": [23.1, 26.1, 41.3, 9.4],
         "pea": "7.987",
         "ocupados": "7.457",
         "desoc": "6.6%",
         "jub": "81.4%",
-        "edu": [
-            20.6,
-            28.3,
-            11.9
-        ],
+        "edu": [20.6, 28.3, 11.9],
         "hogares": "5.211",
         "pobreza": "8.2%"
     },
@@ -58,21 +40,12 @@ const deptoData = {
         "varones_val": "2.850 Varones",
         "mujeres_pct": "51,0%",
         "mujeres_val": "2.960 Mujeres",
-        "edades": [
-            20.7,
-            21.7,
-            43.4,
-            14.0
-        ],
+        "edades": [20.7, 21.7, 43.4, 14.0],
         "pea": "2.941",
         "ocupados": "2.771",
         "desoc": "5.8%",
         "jub": "85.2%",
-        "edu": [
-            18.5,
-            27.3,
-            14.4
-        ],
+        "edu": [18.5, 27.3, 14.4],
         "hogares": "1.977",
         "pobreza": "12.5%"
     },
@@ -83,21 +56,12 @@ const deptoData = {
         "varones_val": "190.380 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "194.227 Mujeres",
-        "edades": [
-            22.5,
-            26.0,
-            42.1,
-            9.4
-        ],
+        "edades": [22.5, 26.0, 42.1, 9.4],
         "pea": "178.500",
         "ocupados": "168.200",
         "desoc": "6.2%",
         "jub": "82.1%",
-        "edu": [
-            15.5,
-            27.5,
-            14.0
-        ],
+        "edu": [15.5, 27.5, 14.0],
         "hogares": "115.420",
         "pobreza": "10.4%"
     },
@@ -108,21 +72,12 @@ const deptoData = {
         "varones_val": "24.468 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "24.963 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "22.244",
         "ocupados": "20.761",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "15.447",
         "pobreza": "11.0%"
     },
@@ -133,21 +88,12 @@ const deptoData = {
         "varones_val": "7.009 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "7.150 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "6.372",
         "ocupados": "5.947",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "4.425",
         "pobreza": "11.0%"
     },
@@ -158,21 +104,12 @@ const deptoData = {
         "varones_val": "4.775 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "4.872 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "4.341",
         "ocupados": "4.052",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "3.015",
         "pobreza": "11.0%"
     },
@@ -183,21 +120,12 @@ const deptoData = {
         "varones_val": "2.902 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "2.960 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "2.638",
         "ocupados": "2.462",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "1.832",
         "pobreza": "11.0%"
     },
@@ -208,71 +136,44 @@ const deptoData = {
         "varones_val": "1.160 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.184 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "1.055",
         "ocupados": "984",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "732",
         "pobreza": "11.0%"
     },
     "rosario_vera_penaloza": {
-        "name": "Rosario V. Pe\u00f1aloza",
+        "name": "Rosario V. Peñaloza",
         "pob": "14.054",
         "varones_pct": "49,5%",
         "varones_val": "6.956 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "7.097 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "6.324",
         "ocupados": "5.902",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "4.391",
         "pobreza": "11.0%"
     },
     "san_martin": {
-        "name": "Gral. San Mart\u00edn",
+        "name": "Gral. San Martín",
         "pob": "4.944",
         "varones_pct": "49,5%",
         "varones_val": "2.447 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "2.496 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "2.224",
         "ocupados": "2.076",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "1.545",
         "pobreza": "11.0%"
     },
@@ -283,21 +184,12 @@ const deptoData = {
         "varones_val": "2.033 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "2.074 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "1.848",
         "ocupados": "1.725",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "1.283",
         "pobreza": "11.0%"
     },
@@ -308,21 +200,12 @@ const deptoData = {
         "varones_val": "3.648 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "3.721 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "3.316",
         "ocupados": "3.095",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "2.303",
         "pobreza": "11.0%"
     },
@@ -333,21 +216,12 @@ const deptoData = {
         "varones_val": "3.536 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "3.608 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "3.215",
         "ocupados": "3.000",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "2.232",
         "pobreza": "11.0%"
     },
@@ -358,21 +232,12 @@ const deptoData = {
         "varones_val": "1.201 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.225 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "1.092",
         "ocupados": "1.019",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "758",
         "pobreza": "11.0%"
     },
@@ -383,21 +248,12 @@ const deptoData = {
         "varones_val": "1.943 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.983 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "1.767",
         "ocupados": "1.649",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "1.227",
         "pobreza": "11.0%"
     },
@@ -408,21 +264,12 @@ const deptoData = {
         "varones_val": "858 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "875 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "780",
         "ocupados": "728",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "541",
         "pobreza": "11.0%"
     },
@@ -433,159 +280,52 @@ const deptoData = {
         "varones_val": "1.351 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.379 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "1.228",
         "ocupados": "1.147",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "853",
         "pobreza": "11.0%"
     },
     "angel_penaloza": {
-        "name": "Gral. \u00c1ngel V. Pe\u00f1aloza",
+        "name": "Gral. Ángel V. Peñaloza",
         "pob": "3.073",
         "varones_pct": "49,5%",
         "varones_val": "1.521 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.551 Mujeres",
-        "edades": [
-            22.0,
-            26.0,
-            42.0,
-            10.0
-        ],
+        "edades": [22.0, 26.0, 42.0, 10.0],
         "pea": "1.382",
         "ocupados": "1.290",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [
-            18.0,
-            26.0,
-            12.0
-        ],
+        "edu": [18.0, 26.0, 12.0],
         "hogares": "960",
         "pobreza": "11.0%"
     }
 };
+
 const mapMarkers = [
-    {
-        "id": "vinchina",
-        "name": "Vinchina",
-        "y": 800,
-        "x": 300
-    },
-    {
-        "id": "lamadrid",
-        "name": "Gral. Lamadrid",
-        "y": 700,
-        "x": 250
-    },
-    {
-        "id": "felipe_varela",
-        "name": "Felipe Varela",
-        "y": 600,
-        "x": 300
-    },
-    {
-        "id": "famatina",
-        "name": "Famatina",
-        "y": 700,
-        "x": 450
-    },
-    {
-        "id": "chilecito",
-        "name": "Chilecito",
-        "y": 620,
-        "x": 480
-    },
-    {
-        "id": "san_blas",
-        "name": "San Blas de los Sauces",
-        "y": 780,
-        "x": 520
-    },
-    {
-        "id": "arauco",
-        "name": "Arauco",
-        "y": 760,
-        "x": 600
-    },
-    {
-        "id": "castro_barros",
-        "name": "Castro Barros",
-        "y": 700,
-        "x": 560
-    },
-    {
-        "id": "sanagasta",
-        "name": "Sanagasta",
-        "y": 640,
-        "x": 580
-    },
-    {
-        "id": "capital",
-        "name": "Capital",
-        "y": 600,
-        "x": 700
-    },
-    {
-        "id": "independencia",
-        "name": "Independencia",
-        "y": 480,
-        "x": 550
-    },
-    {
-        "id": "angel_penaloza",
-        "name": "\u00c1ngel V. Pe\u00f1aloza",
-        "y": 400,
-        "x": 650
-    },
-    {
-        "id": "chamical",
-        "name": "Chamical",
-        "y": 450,
-        "x": 800
-    },
-    {
-        "id": "belgrano",
-        "name": "Gral. Belgrano",
-        "y": 350,
-        "x": 800
-    },
-    {
-        "id": "juan_facundo_quiroga",
-        "name": "J. F. Quiroga",
-        "y": 300,
-        "x": 650
-    },
-    {
-        "id": "ocampo",
-        "name": "Gral. Ocampo",
-        "y": 250,
-        "x": 800
-    },
-    {
-        "id": "rosario_vera_penaloza",
-        "name": "Rosario V. Pe\u00f1aloza",
-        "y": 180,
-        "x": 650
-    },
-    {
-        "id": "san_martin",
-        "name": "Gral. San Mart\u00edn",
-        "y": 150,
-        "x": 800
-    }
+    { "id": "vinchina", "name": "Vinchina", "y": 800, "x": 300 },
+    { "id": "lamadrid", "name": "Gral. Lamadrid", "y": 700, "x": 250 },
+    { "id": "felipe_varela", "name": "Felipe Varela", "y": 600, "x": 300 },
+    { "id": "famatina", "name": "Famatina", "y": 700, "x": 450 },
+    { "id": "chilecito", "name": "Chilecito", "y": 620, "x": 480 },
+    { "id": "san_blas", "name": "San Blas de los Sauces", "y": 780, "x": 520 },
+    { "id": "arauco", "name": "Arauco", "y": 760, "x": 600 },
+    { "id": "castro_barros", "name": "Castro Barros", "y": 700, "x": 560 },
+    { "id": "sanagasta", "name": "Sanagasta", "y": 640, "x": 580 },
+    { "id": "capital", "name": "Capital", "y": 600, "x": 700 },
+    { "id": "independencia", "name": "Independencia", "y": 480, "x": 550 },
+    { "id": "angel_penaloza", "name": "Ángel V. Peñaloza", "y": 400, "x": 650 },
+    { "id": "chamical", "name": "Chamical", "y": 450, "x": 800 },
+    { "id": "belgrano", "name": "Gral. Belgrano", "y": 350, "x": 800 },
+    { "id": "juan_facundo_quiroga", "name": "J. F. Quiroga", "y": 300, "x": 650 },
+    { "id": "ocampo", "name": "Gral. Ocampo", "y": 250, "x": 800 },
+    { "id": "rosario_vera_penaloza", "name": "Rosario V. Peñaloza", "y": 180, "x": 650 },
+    { "id": "san_martin", "name": "Gral. San Martín", "y": 150, "x": 800 }
 ];
 
 // 2. Navegación
@@ -646,17 +386,14 @@ function updatePanel(dataId) {
 // 4. Inicialización del Mapa con L.imageOverlay
 let map;
 function initMap() {
-    // Configurar mapa de coordenadas simples para la imagen
     map = L.map('interactive-map', {
         crs: L.CRS.Simple,
         minZoom: -1,
         maxZoom: 2
     });
 
-    // Dimensiones de la imagen proporcionada (aproximadas para bounding box)
     const bounds = [[0, 0], [1000, 1000]];
     
-    // Cargar la imagen del mapa aportada por el usuario
     L.imageOverlay('provincia de la rioja cabeceras.jpg', bounds, {
         errorOverlayUrl: 'https://via.placeholder.com/1000x1000/e5dcf5/6a4c9c?text=Asegurate+de+subir+provincia+de+la+rioja+cabeceras.jpg'
     }).addTo(map);
@@ -670,14 +407,16 @@ function initMap() {
         iconAnchor: [15, 30]
     });
 
-    // Cargar los 18 marcadores sobre las coordenadas X, Y de la imagen
     mapMarkers.forEach(m => {
-        // En CRS.Simple, las coordenadas se pasan como [Y, X]
         L.marker([m.y, m.x], {icon: customIcon})
          .addTo(map)
          .bindTooltip(m.name, {permanent: false, direction: "top", offset: [0, -20]})
          .on('click', () => {
              updatePanel(m.id);
+             // Smooth scroll on Mobile devices
+             if (window.innerWidth <= 1024) {
+                 document.getElementById('data-panel').scrollIntoView({behavior: 'smooth'});
+             }
          });
     });
 
@@ -689,6 +428,9 @@ function initMap() {
             e.stopPropagation();
             map.fitBounds(bounds);
             updatePanel('provincia');
+            if (window.innerWidth <= 1024) {
+                 document.getElementById('data-panel').scrollIntoView({behavior: 'smooth'});
+            }
         }
         return div;
     };
@@ -734,5 +476,5 @@ function syncData() {
 window.onload = () => {
     initMap();
     document.getElementById('last-update-date').innerText = new Date().toLocaleDateString('es-AR');
-    updatePanel('provincia'); // Carga datos iniciales reales
+    updatePanel('provincia'); 
 };
