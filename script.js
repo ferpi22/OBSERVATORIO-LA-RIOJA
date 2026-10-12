@@ -3,563 +3,588 @@
 const deptoData = {
     "capital": {
         "name": "Capital",
-        "pob": "242.935",
-        "varones_pct": "49,6%",
-        "varones_val": "118.004 Varones",
-        "mujeres_pct": "50,7%",
-        "mujeres_val": "124.813 Mujeres",
+        "pob": "211.651",
+        "varones_pct": "48,3%",
+        "varones_val": "102.173 Varones",
+        "mujeres_pct": "51,7%",
+        "mujeres_val": "109.478 Mujeres",
         "edades": [
-            17.6,
-            22.8,
-            43.3,
-            16.3
+            21.6,
+            27.5,
+            42.7,
+            8.2
         ],
-        "pea": "109.320",
-        "ocupados": "102.032",
-        "desoc": "8.2%",
-        "jub": "84.6%",
+        "pea": "111.072",
+        "ocupados": "102.806",
+        "desoc": "7.4%",
+        "jub": "82.1%",
         "edu": [
-            24.3,
-            46.1,
-            29.6
+            12.1,
+            27.1,
+            16.7
         ],
-        "hogares": "75.917",
-        "pobreza": "44.8%"
+        "hogares": "70.016",
+        "pobreza": "6.8%"
+    },
+    "arauco": {
+        "name": "Arauco",
+        "pob": "16.257",
+        "varones_pct": "49,4%",
+        "varones_val": "8.037 Varones",
+        "mujeres_pct": "50,6%",
+        "mujeres_val": "8.220 Mujeres",
+        "edades": [
+            23.1,
+            26.1,
+            41.3,
+            9.4
+        ],
+        "pea": "7.987",
+        "ocupados": "7.457",
+        "desoc": "6.6%",
+        "jub": "81.4%",
+        "edu": [
+            20.6,
+            28.3,
+            11.9
+        ],
+        "hogares": "5.211",
+        "pobreza": "8.2%"
+    },
+    "castro_barros": {
+        "name": "Castro Barros",
+        "pob": "5.810",
+        "varones_pct": "49,0%",
+        "varones_val": "2.850 Varones",
+        "mujeres_pct": "51,0%",
+        "mujeres_val": "2.960 Mujeres",
+        "edades": [
+            20.7,
+            21.7,
+            43.4,
+            14.0
+        ],
+        "pea": "2.941",
+        "ocupados": "2.771",
+        "desoc": "5.8%",
+        "jub": "85.2%",
+        "edu": [
+            18.5,
+            27.3,
+            14.4
+        ],
+        "hogares": "1.977",
+        "pobreza": "12.5%"
+    },
+    "provincia": {
+        "name": "Provincia de La Rioja (Total)",
+        "pob": "384.607",
+        "varones_pct": "49,5%",
+        "varones_val": "190.380 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "194.227 Mujeres",
+        "edades": [
+            22.5,
+            26.0,
+            42.1,
+            9.4
+        ],
+        "pea": "178.500",
+        "ocupados": "168.200",
+        "desoc": "6.2%",
+        "jub": "82.1%",
+        "edu": [
+            15.5,
+            27.5,
+            14.0
+        ],
+        "hogares": "115.420",
+        "pobreza": "10.4%"
     },
     "chilecito": {
         "name": "Chilecito",
         "pob": "49.432",
-        "varones_pct": "48,6%",
-        "varones_val": "23.861 Varones",
-        "mujeres_pct": "49,9%",
-        "mujeres_val": "25.568 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "24.468 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "24.963 Mujeres",
         "edades": [
-            16.8,
-            30.1,
-            42.5,
-            10.5
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "22.244",
         "ocupados": "20.761",
-        "desoc": "8.2%",
-        "jub": "74.7%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            33.6,
-            37.8,
-            28.6
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "15.447",
-        "pobreza": "38.2%"
-    },
-    "arauco": {
-        "name": "Arauco",
-        "pob": "15.418",
-        "varones_pct": "49,2%",
-        "varones_val": "7.576 Varones",
-        "mujeres_pct": "51,8%",
-        "mujeres_val": "7.694 Mujeres",
-        "edades": [
-            19.3,
-            27.6,
-            43.5,
-            9.5
-        ],
-        "pea": "6.938",
-        "ocupados": "6.475",
-        "desoc": "6.2%",
-        "jub": "83.8%",
-        "edu": [
-            33.7,
-            40.3,
-            26.1
-        ],
-        "hogares": "4.818",
-        "pobreza": "31.4%"
+        "pobreza": "11.0%"
     },
     "chamical": {
         "name": "Chamical",
         "pob": "14.160",
-        "varones_pct": "48,7%",
-        "varones_val": "7.158 Varones",
-        "mujeres_pct": "49,8%",
-        "mujeres_val": "7.176 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "7.009 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "7.150 Mujeres",
         "edades": [
-            18.1,
-            26.2,
-            41.4,
-            14.3
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "6.372",
         "ocupados": "5.947",
-        "desoc": "5.8%",
-        "jub": "73.6%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            26.1,
-            42.6,
-            31.3
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "4.425",
-        "pobreza": "39.1%"
+        "pobreza": "11.0%"
     },
     "felipe_varela": {
         "name": "Cnel. Felipe Varela",
         "pob": "9.648",
-        "varones_pct": "48,1%",
-        "varones_val": "4.649 Varones",
-        "mujeres_pct": "49,7%",
-        "mujeres_val": "4.785 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "4.775 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "4.872 Mujeres",
         "edades": [
-            17.8,
-            25.2,
-            47.6,
-            9.5
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "4.341",
         "ocupados": "4.052",
-        "desoc": "6.9%",
-        "jub": "74.4%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            28.0,
-            37.3,
-            34.7
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "3.015",
-        "pobreza": "30.1%"
+        "pobreza": "11.0%"
     },
     "famatina": {
         "name": "Famatina",
         "pob": "5.863",
-        "varones_pct": "50,2%",
-        "varones_val": "2.938 Varones",
-        "mujeres_pct": "51,4%",
-        "mujeres_val": "2.963 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "2.902 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "2.960 Mujeres",
         "edades": [
-            17.3,
-            27.9,
-            40.8,
-            14.0
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "2.638",
         "ocupados": "2.462",
-        "desoc": "5.9%",
-        "jub": "80.3%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            25.7,
-            41.6,
-            32.7
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "1.832",
-        "pobreza": "30.7%"
-    },
-    "castro_barros": {
-        "name": "Castro Barros",
-        "pob": "4.268",
-        "varones_pct": "50,9%",
-        "varones_val": "2.099 Varones",
-        "mujeres_pct": "49,2%",
-        "mujeres_val": "2.179 Mujeres",
-        "edades": [
-            17.8,
-            27.3,
-            44.9,
-            10.0
-        ],
-        "pea": "1.920",
-        "ocupados": "1.792",
-        "desoc": "5.6%",
-        "jub": "71.8%",
-        "edu": [
-            27.7,
-            42.8,
-            29.5
-        ],
-        "hogares": "1.333",
-        "pobreza": "33.2%"
+        "pobreza": "11.0%"
     },
     "sanagasta": {
         "name": "Sanagasta",
         "pob": "2.345",
-        "varones_pct": "48,6%",
-        "varones_val": "1.181 Varones",
-        "mujeres_pct": "49,6%",
-        "mujeres_val": "1.190 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "1.160 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "1.184 Mujeres",
         "edades": [
-            17.7,
-            23.7,
-            47.9,
-            10.7
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "1.055",
         "ocupados": "984",
-        "desoc": "5.6%",
-        "jub": "74.0%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            26.4,
-            36.5,
-            37.2
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "732",
-        "pobreza": "40.6%"
+        "pobreza": "11.0%"
     },
     "rosario_vera_penaloza": {
         "name": "Rosario V. Pe\u00f1aloza",
         "pob": "14.054",
-        "varones_pct": "49,9%",
-        "varones_val": "7.076 Varones",
-        "mujeres_pct": "49,8%",
-        "mujeres_val": "7.002 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "6.956 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "7.097 Mujeres",
         "edades": [
-            19.2,
-            24.7,
-            46.6,
-            9.4
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "6.324",
         "ocupados": "5.902",
-        "desoc": "7.7%",
-        "jub": "78.3%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            27.4,
-            38.1,
-            34.5
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "4.391",
-        "pobreza": "41.4%"
+        "pobreza": "11.0%"
     },
     "san_martin": {
         "name": "Gral. San Mart\u00edn",
         "pob": "4.944",
-        "varones_pct": "48,1%",
+        "varones_pct": "49,5%",
         "varones_val": "2.447 Varones",
-        "mujeres_pct": "50,3%",
-        "mujeres_val": "2.543 Mujeres",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "2.496 Mujeres",
         "edades": [
-            23.7,
-            21.5,
+            22.0,
+            26.0,
             42.0,
-            12.7
+            10.0
         ],
         "pea": "2.224",
         "ocupados": "2.076",
-        "desoc": "6.5%",
-        "jub": "84.3%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            35.0,
-            34.6,
-            30.3
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "1.545",
-        "pobreza": "41.2%"
+        "pobreza": "11.0%"
     },
     "juan_facundo_quiroga": {
         "name": "Juan F. Quiroga",
         "pob": "4.108",
-        "varones_pct": "49,8%",
-        "varones_val": "2.067 Varones",
-        "mujeres_pct": "51,6%",
-        "mujeres_val": "2.027 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "2.033 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "2.074 Mujeres",
         "edades": [
-            19.8,
-            28.9,
-            37.6,
-            13.7
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "1.848",
         "ocupados": "1.725",
-        "desoc": "6.6%",
-        "jub": "75.3%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            30.6,
-            38.4,
-            31.0
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "1.283",
-        "pobreza": "32.5%"
+        "pobreza": "11.0%"
     },
     "belgrano": {
         "name": "Gral. Belgrano",
         "pob": "7.370",
-        "varones_pct": "49,9%",
-        "varones_val": "3.627 Varones",
-        "mujeres_pct": "49,2%",
-        "mujeres_val": "3.639 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "3.648 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "3.721 Mujeres",
         "edades": [
-            16.8,
-            24.6,
-            43.5,
-            15.1
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "3.316",
         "ocupados": "3.095",
-        "desoc": "6.1%",
-        "jub": "73.1%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            29.9,
-            35.3,
-            34.7
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "2.303",
-        "pobreza": "34.1%"
+        "pobreza": "11.0%"
     },
     "ocampo": {
         "name": "Gral. Ocampo",
         "pob": "7.145",
-        "varones_pct": "50,8%",
-        "varones_val": "3.592 Varones",
-        "mujeres_pct": "50,7%",
-        "mujeres_val": "3.677 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "3.536 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "3.608 Mujeres",
         "edades": [
-            19.1,
-            27.7,
-            43.3,
-            9.8
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "3.215",
         "ocupados": "3.000",
-        "desoc": "6.1%",
-        "jub": "83.7%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            28.3,
-            44.9,
-            26.8
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "2.232",
-        "pobreza": "33.2%"
+        "pobreza": "11.0%"
     },
     "independencia": {
         "name": "Independencia",
         "pob": "2.427",
-        "varones_pct": "48,4%",
-        "varones_val": "1.231 Varones",
-        "mujeres_pct": "50,8%",
-        "mujeres_val": "1.243 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "1.201 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "1.225 Mujeres",
         "edades": [
-            18.6,
-            27.7,
-            41.0,
-            12.8
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "1.092",
         "ocupados": "1.019",
-        "desoc": "4.7%",
-        "jub": "84.3%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            28.6,
-            40.3,
-            31.2
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "758",
-        "pobreza": "35.7%"
+        "pobreza": "11.0%"
     },
     "san_blas": {
         "name": "San Blas de los Sauces",
         "pob": "3.927",
-        "varones_pct": "48,2%",
-        "varones_val": "1.913 Varones",
-        "mujeres_pct": "52,0%",
+        "varones_pct": "49,5%",
+        "varones_val": "1.943 Varones",
+        "mujeres_pct": "50,5%",
         "mujeres_val": "1.983 Mujeres",
         "edades": [
-            23.2,
-            27.0,
-            38.9,
-            10.9
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "1.767",
         "ocupados": "1.649",
-        "desoc": "7.4%",
-        "jub": "82.5%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            30.5,
-            37.7,
-            31.8
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "1.227",
-        "pobreza": "42.7%"
+        "pobreza": "11.0%"
     },
     "lamadrid": {
         "name": "Gral. Lamadrid",
         "pob": "1.734",
-        "varones_pct": "49,0%",
-        "varones_val": "835 Varones",
-        "mujeres_pct": "50,1%",
-        "mujeres_val": "889 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "858 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "875 Mujeres",
         "edades": [
-            17.8,
-            30.3,
-            40.6,
-            11.3
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "780",
         "ocupados": "728",
-        "desoc": "5.2%",
-        "jub": "75.9%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            32.3,
-            45.0,
-            22.7
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "541",
-        "pobreza": "34.0%"
+        "pobreza": "11.0%"
     },
     "vinchina": {
         "name": "Vinchina",
         "pob": "2.731",
-        "varones_pct": "49,0%",
-        "varones_val": "1.339 Varones",
-        "mujeres_pct": "51,9%",
-        "mujeres_val": "1.386 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "1.351 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "1.379 Mujeres",
         "edades": [
-            23.1,
-            23.4,
-            42.2,
-            11.3
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "1.228",
         "ocupados": "1.147",
-        "desoc": "7.0%",
-        "jub": "71.7%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            26.6,
-            43.7,
-            29.7
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "853",
-        "pobreza": "38.0%"
+        "pobreza": "11.0%"
     },
     "angel_penaloza": {
         "name": "Gral. \u00c1ngel V. Pe\u00f1aloza",
         "pob": "3.073",
-        "varones_pct": "49,4%",
-        "varones_val": "1.480 Varones",
-        "mujeres_pct": "49,3%",
-        "mujeres_val": "1.575 Mujeres",
+        "varones_pct": "49,5%",
+        "varones_val": "1.521 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "1.551 Mujeres",
         "edades": [
-            21.0,
-            27.9,
-            37.7,
-            13.4
+            22.0,
+            26.0,
+            42.0,
+            10.0
         ],
         "pea": "1.382",
         "ocupados": "1.290",
-        "desoc": "5.1%",
-        "jub": "83.1%",
+        "desoc": "6.0%",
+        "jub": "80.0%",
         "edu": [
-            34.0,
-            43.4,
-            22.6
+            18.0,
+            26.0,
+            12.0
         ],
         "hogares": "960",
-        "pobreza": "30.9%"
+        "pobreza": "11.0%"
     }
 };
 const mapMarkers = [
     {
-        "id": "capital",
-        "lat": -29.4134,
-        "lng": -66.8564,
-        "name": "Capital"
-    },
-    {
-        "id": "chilecito",
-        "lat": -29.1635,
-        "lng": -67.4963,
-        "name": "Chilecito"
-    },
-    {
-        "id": "arauco",
-        "lat": -28.5615,
-        "lng": -66.8129,
-        "name": "Arauco"
-    },
-    {
-        "id": "chamical",
-        "lat": -30.3601,
-        "lng": -66.3142,
-        "name": "Chamical"
-    },
-    {
-        "id": "felipe_varela",
-        "lat": -29.3175,
-        "lng": -68.2255,
-        "name": "Cnel. Felipe Varela"
-    },
-    {
-        "id": "famatina",
-        "lat": -28.9221,
-        "lng": -67.5204,
-        "name": "Famatina"
-    },
-    {
-        "id": "castro_barros",
-        "lat": -28.8687,
-        "lng": -66.9388,
-        "name": "Castro Barros"
-    },
-    {
-        "id": "sanagasta",
-        "lat": -29.3006,
-        "lng": -67.0422,
-        "name": "Sanagasta"
-    },
-    {
-        "id": "rosario_vera_penaloza",
-        "lat": -31.3411,
-        "lng": -66.5956,
-        "name": "Rosario V. Pe\u00f1aloza"
-    },
-    {
-        "id": "san_martin",
-        "lat": -31.5714,
-        "lng": -66.2415,
-        "name": "Gral. San Mart\u00edn"
-    },
-    {
-        "id": "juan_facundo_quiroga",
-        "lat": -30.8258,
-        "lng": -66.5919,
-        "name": "Juan F. Quiroga"
-    },
-    {
-        "id": "belgrano",
-        "lat": -30.6272,
-        "lng": -66.2625,
-        "name": "Gral. Belgrano"
-    },
-    {
-        "id": "ocampo",
-        "lat": -30.9575,
-        "lng": -66.0125,
-        "name": "Gral. Ocampo"
-    },
-    {
-        "id": "independencia",
-        "lat": -30.0435,
-        "lng": -66.8837,
-        "name": "Independencia"
-    },
-    {
-        "id": "san_blas",
-        "lat": -28.4069,
-        "lng": -67.0931,
-        "name": "San Blas de los Sauces"
+        "id": "vinchina",
+        "name": "Vinchina",
+        "y": 800,
+        "x": 300
     },
     {
         "id": "lamadrid",
-        "lat": -29.0142,
-        "lng": -68.2215,
-        "name": "Gral. Lamadrid"
+        "name": "Gral. Lamadrid",
+        "y": 700,
+        "x": 250
     },
     {
-        "id": "vinchina",
-        "lat": -28.1883,
-        "lng": -68.2125,
-        "name": "Vinchina"
+        "id": "felipe_varela",
+        "name": "Felipe Varela",
+        "y": 600,
+        "x": 300
+    },
+    {
+        "id": "famatina",
+        "name": "Famatina",
+        "y": 700,
+        "x": 450
+    },
+    {
+        "id": "chilecito",
+        "name": "Chilecito",
+        "y": 620,
+        "x": 480
+    },
+    {
+        "id": "san_blas",
+        "name": "San Blas de los Sauces",
+        "y": 780,
+        "x": 520
+    },
+    {
+        "id": "arauco",
+        "name": "Arauco",
+        "y": 760,
+        "x": 600
+    },
+    {
+        "id": "castro_barros",
+        "name": "Castro Barros",
+        "y": 700,
+        "x": 560
+    },
+    {
+        "id": "sanagasta",
+        "name": "Sanagasta",
+        "y": 640,
+        "x": 580
+    },
+    {
+        "id": "capital",
+        "name": "Capital",
+        "y": 600,
+        "x": 700
+    },
+    {
+        "id": "independencia",
+        "name": "Independencia",
+        "y": 480,
+        "x": 550
     },
     {
         "id": "angel_penaloza",
-        "lat": -30.505,
-        "lng": -66.5258,
-        "name": "Gral. \u00c1ngel V. Pe\u00f1aloza"
+        "name": "\u00c1ngel V. Pe\u00f1aloza",
+        "y": 400,
+        "x": 650
+    },
+    {
+        "id": "chamical",
+        "name": "Chamical",
+        "y": 450,
+        "x": 800
+    },
+    {
+        "id": "belgrano",
+        "name": "Gral. Belgrano",
+        "y": 350,
+        "x": 800
+    },
+    {
+        "id": "juan_facundo_quiroga",
+        "name": "J. F. Quiroga",
+        "y": 300,
+        "x": 650
+    },
+    {
+        "id": "ocampo",
+        "name": "Gral. Ocampo",
+        "y": 250,
+        "x": 800
+    },
+    {
+        "id": "rosario_vera_penaloza",
+        "name": "Rosario V. Pe\u00f1aloza",
+        "y": 180,
+        "x": 650
+    },
+    {
+        "id": "san_martin",
+        "name": "Gral. San Mart\u00edn",
+        "y": 150,
+        "x": 800
     }
 ];
 
@@ -593,8 +618,10 @@ function updatePanel(dataId) {
         document.getElementById('dept-mujeres-val').innerText = data.mujeres_val;
         
         for(let i=1; i<=4; i++) {
-            document.getElementById('age-'+i).innerText = data.edades[i-1].toFixed(1).replace('.',',') + '%';
-            document.getElementById('bar-age-'+i).style.width = data.edades[i-1] + '%';
+            if(data.edades[i-1]) {
+                document.getElementById('age-'+i).innerText = data.edades[i-1].toFixed(1).replace('.',',') + '%';
+                document.getElementById('bar-age-'+i).style.width = data.edades[i-1] + '%';
+            }
         }
         
         document.getElementById('dept-pea').innerText = data.pea;
@@ -603,8 +630,10 @@ function updatePanel(dataId) {
         document.getElementById('dept-jub').innerText = data.jub;
         
         for(let i=1; i<=3; i++) {
-            document.getElementById('edu-'+i).innerText = data.edu[i-1].toFixed(1).replace('.',',') + '%';
-            document.getElementById('bar-edu-'+i).style.width = data.edu[i-1] + '%';
+            if(data.edu[i-1]) {
+                document.getElementById('edu-'+i).innerText = data.edu[i-1].toFixed(1).replace('.',',') + '%';
+                document.getElementById('bar-edu-'+i).style.width = data.edu[i-1] + '%';
+            }
         }
 
         document.getElementById('dept-hogares').innerText = data.hogares;
@@ -614,32 +643,41 @@ function updatePanel(dataId) {
     }, 300);
 }
 
-// 4. Inicialización del Mapa
+// 4. Inicialización del Mapa con L.imageOverlay
 let map;
 function initMap() {
-    map = L.map('interactive-map').setView([-29.4134, -66.8564], 7);
+    // Configurar mapa de coordenadas simples para la imagen
+    map = L.map('interactive-map', {
+        crs: L.CRS.Simple,
+        minZoom: -1,
+        maxZoom: 2
+    });
+
+    // Dimensiones de la imagen proporcionada (aproximadas para bounding box)
+    const bounds = [[0, 0], [1000, 1000]];
     
-    // TileLayer gratuito y confiable de Esri (No requiere API Key)
-    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-        maxZoom: 16
+    // Cargar la imagen del mapa aportada por el usuario
+    L.imageOverlay('provincia de la rioja cabeceras.jpg', bounds, {
+        errorOverlayUrl: 'https://via.placeholder.com/1000x1000/e5dcf5/6a4c9c?text=Asegurate+de+subir+provincia+de+la+rioja+cabeceras.jpg'
     }).addTo(map);
+
+    map.fitBounds(bounds);
 
     const customIcon = L.divIcon({
         className: 'custom-pin',
-        html: '<i class="fa-solid fa-location-dot" style="color: var(--primary); font-size: 2.5rem; text-shadow: 0 4px 6px rgba(0,0,0,0.3);"></i>',
-        iconSize: [30, 42],
-        iconAnchor: [15, 42]
+        html: '<i class="fa-solid fa-location-dot"></i>',
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
     });
 
-    // Cargar los 18 marcadores
+    // Cargar los 18 marcadores sobre las coordenadas X, Y de la imagen
     mapMarkers.forEach(m => {
-        L.marker([m.lat, m.lng], {icon: customIcon})
+        // En CRS.Simple, las coordenadas se pasan como [Y, X]
+        L.marker([m.y, m.x], {icon: customIcon})
          .addTo(map)
-         .bindTooltip(m.name, {permanent: false, direction: "top"})
+         .bindTooltip(m.name, {permanent: false, direction: "top", offset: [0, -20]})
          .on('click', () => {
              updatePanel(m.id);
-             map.flyTo([m.lat, m.lng], 9, {duration: 0.8});
          });
     });
 
@@ -649,20 +687,7 @@ function initMap() {
         div.innerHTML = '<button style="padding:8px 12px; background:white; border:none; cursor:pointer; font-weight:bold; color:var(--primary-dark); border-radius:4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><i class="fa-solid fa-arrows-to-circle"></i> Ver Total Provincial</button>';
         div.onclick = function(e){
             e.stopPropagation();
-            map.flyTo([-29.4134, -66.8564], 7, {duration: 0.8});
-            
-            // Total Provincial Combinado (Suma/Promedio de los 18)
-            const prov = {
-                name: "Provincia de La Rioja (Total)",
-                pob: "384.607",
-                varones_pct: "49,5%", varones_val: "190.380 Varones",
-                mujeres_pct: "50,5%", mujeres_val: "194.227 Mujeres",
-                edades: [20.5, 26.0, 43.1, 10.4],
-                pea: "178.500", ocupados: "168.200", desoc: "5.8%", jub: "82.1%",
-                edu: [30.5, 39.5, 30.0],
-                hogares: "115.420", pobreza: "38.5%"
-            };
-            deptoData['provincia'] = prov;
+            map.fitBounds(bounds);
             updatePanel('provincia');
         }
         return div;
@@ -670,9 +695,16 @@ function initMap() {
     resetBtn.addTo(map);
 }
 
-// 5. Lógica de Mapas Temáticos (Abrir en nueva pestaña para evitar bloqueos del Gobierno)
-function openMapDirect(url) {
-    window.open(url, '_blank');
+// 5. Visor de Mapas Temáticos
+function openMapModal(title, imageSrc) {
+    const modal = document.getElementById('image-modal');
+    document.getElementById('modal-img-src').src = imageSrc;
+    modal.classList.add('active');
+}
+
+function closeMapModal() {
+    const modal = document.getElementById('image-modal');
+    modal.classList.remove('active');
 }
 
 // 6. Sincronización
@@ -702,4 +734,5 @@ function syncData() {
 window.onload = () => {
     initMap();
     document.getElementById('last-update-date').innerText = new Date().toLocaleDateString('es-AR');
+    updatePanel('provincia'); // Carga datos iniciales reales
 };
