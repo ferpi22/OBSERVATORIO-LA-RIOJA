@@ -1,5 +1,5 @@
 
-// 1. Datos Simulados de Departamentos (Basados en oficiales LR y el PDF de referencia)
+// 1. Datos Simulados de Departamentos
 const deptoData = {
     "capital": {
         name: "Capital",
@@ -60,7 +60,6 @@ function switchTab(tabId) {
 function updatePanel(dataId) {
     const data = deptoData[dataId] || deptoData['provincia'];
     
-    // Animar la entrada
     const panel = document.getElementById('data-panel');
     panel.style.opacity = 0;
     
@@ -73,25 +72,21 @@ function updatePanel(dataId) {
         document.getElementById('dept-mujeres-pct').innerText = data.mujeres_pct;
         document.getElementById('dept-mujeres-val').innerText = data.mujeres_val + " Mujeres";
         
-        // Edades
         for(let i=1; i<=4; i++) {
             document.getElementById('age-'+i).innerText = data.edades[i-1].toFixed(1).replace('.',',') + '%';
             document.getElementById('bar-age-'+i).style.width = data.edades[i-1] + '%';
         }
         
-        // Economía
         document.getElementById('dept-pea').innerText = data.pea;
         document.getElementById('dept-ocupados').innerText = data.ocupados;
         document.getElementById('dept-desoc').innerText = data.desoc;
         document.getElementById('dept-jub').innerText = data.jub;
         
-        // Educación
         for(let i=1; i<=3; i++) {
             document.getElementById('edu-'+i).innerText = data.edu[i-1].toFixed(1).replace('.',',') + '%';
             document.getElementById('bar-edu-'+i).style.width = data.edu[i-1] + '%';
         }
 
-        // Pobreza
         document.getElementById('dept-hogares').innerText = data.hogares;
         document.getElementById('dept-pobreza').innerText = data.pobreza;
 
@@ -104,26 +99,23 @@ let map;
 function initMap() {
     map = L.map('interactive-map').setView([-29.4134, -66.8564], 7);
     
-    // TileLayer limpio y moderno (CartoDB Positron)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; OpenStreetMap',
-        maxZoom: 12
+    // CORRECCIÓN: Uso de un TileLayer gratuito (Esri Light Gray) que NO requiere API KEY y tiene estética pastel/limpia
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+        maxZoom: 16
     }).addTo(map);
 
-    // Icono Violeta Pastel
     const customIcon = L.divIcon({
         className: 'custom-pin',
-        html: '<i class="fa-solid fa-location-dot" style="color: var(--primary); font-size: 2rem; drop-shadow: 0 4px 6px rgba(0,0,0,0.2);"></i>',
+        html: '<i class="fa-solid fa-location-dot" style="color: var(--primary); font-size: 2.5rem; text-shadow: 0 4px 6px rgba(0,0,0,0.3);"></i>',
         iconSize: [30, 42],
         iconAnchor: [15, 42]
     });
 
-    // Marcadores de Departamentos
     const markers = [
         { id: 'capital', lat: -29.4134, lng: -66.8564, name: "Capital" },
         { id: 'chilecito', lat: -29.1635, lng: -67.4963, name: "Chilecito" },
         { id: 'arauco', lat: -28.5615, lng: -66.8129, name: "Arauco" }
-        // Se pueden agregar los 18 departamentos aquí
     ];
 
     markers.forEach(m => {
@@ -136,11 +128,10 @@ function initMap() {
          });
     });
 
-    // Botón para volver al total provincial
     const resetBtn = L.control({position: 'topright'});
     resetBtn.onAdd = function() {
         const div = L.DomUtil.create('div', 'leaflet-bar');
-        div.innerHTML = '<button style="padding:8px 12px; background:white; border:none; cursor:pointer; font-weight:bold; color:var(--primary-dark); border-radius:4px;"><i class="fa-solid fa-arrows-to-circle"></i> Ver Total Provincial</button>';
+        div.innerHTML = '<button style="padding:8px 12px; background:white; border:none; cursor:pointer; font-weight:bold; color:var(--primary-dark); border-radius:4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><i class="fa-solid fa-arrows-to-circle"></i> Ver Total Provincial</button>';
         div.onclick = function(e){
             e.stopPropagation();
             map.flyTo([-29.4134, -66.8564], 7, {duration: 0.8});
@@ -151,7 +142,21 @@ function initMap() {
     resetBtn.addTo(map);
 }
 
-// 5. Lógica de Sincronización
+// 5. Lógica de Mapas Temáticos (Modal)
+function openMapModal(title, url) {
+    const modal = document.getElementById('map-modal');
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-iframe').src = url;
+    modal.classList.add('active');
+}
+
+function closeMapModal() {
+    const modal = document.getElementById('map-modal');
+    modal.classList.remove('active');
+    document.getElementById('modal-iframe').src = ''; // Limpiar iframe
+}
+
+// 6. Sincronización
 function syncData() {
     const btn = document.querySelector('.sync-btn');
     btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sincronizando...';

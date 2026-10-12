@@ -196,34 +196,47 @@
         <section id="tab-mapas-tematicos" class="tab-content">
             <div class="dashboard-header">
                 <h2>Mapas Temáticos</h2>
-                <p>Colección de mapas estadísticos oficiales de la provincia.</p>
+                <p>Explora la cartografía oficial y temática de la provincia de La Rioja.</p>
             </div>
             
             <div class="maps-gallery">
-                <div class="map-card" onclick="alert('Cargando mapa de Pobreza...')">
+                <div class="map-card" onclick="openMapModal('Mapa de Pobreza por NBI', 'https://estadisticas.larioja.gob.ar/index.php/mapas')">
                     <div class="map-img-placeholder c-purple"><i class="fa-solid fa-chart-area"></i></div>
                     <h3>Mapa de Pobreza por NBI</h3>
-                    <p>Distribución de Necesidades Básicas Insatisfechas.</p>
+                    <p>Distribución de Necesidades Básicas Insatisfechas a nivel censal.</p>
                 </div>
-                <div class="map-card" onclick="alert('Cargando mapa de Educación...')">
+                <div class="map-card" onclick="openMapModal('Mapa de Nivel Educativo', 'https://estadisticas.larioja.gob.ar/index.php/mapas')">
                     <div class="map-img-placeholder c-blue"><i class="fa-solid fa-graduation-cap"></i></div>
                     <h3>Mapa de Nivel Educativo</h3>
-                    <p>Zonificación de escolaridad superior alcanzada.</p>
+                    <p>Zonificación de escolaridad superior alcanzada en la provincia.</p>
                 </div>
-                <div class="map-card" onclick="alert('Cargando mapa de Empleo...')">
+                <div class="map-card" onclick="openMapModal('Actividad Económica', 'https://estadisticas.larioja.gob.ar/index.php/mapas')">
                     <div class="map-img-placeholder c-green"><i class="fa-solid fa-industry"></i></div>
                     <h3>Actividad Económica</h3>
-                    <p>Distribución de la PEA y ramas de actividad.</p>
+                    <p>Distribución de la PEA y ramas de actividad productiva.</p>
                 </div>
-                <div class="map-card" onclick="alert('Cargando mapa Demográfico...')">
+                <div class="map-card" onclick="openMapModal('Densidad Demográfica', 'https://estadisticas.larioja.gob.ar/index.php/mapas')">
                     <div class="map-img-placeholder c-orange"><i class="fa-solid fa-users-line"></i></div>
                     <h3>Densidad Demográfica</h3>
-                    <p>Concentración poblacional por radio censal.</p>
+                    <p>Concentración poblacional por departamento y radio censal.</p>
                 </div>
             </div>
         </section>
 
     </main>
+
+    <!-- Modal para Mapas Temáticos -->
+    <div id="map-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Mapa Temático</h2>
+                <button class="close-btn" onclick="closeMapModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <iframe id="modal-iframe" src="" frameborder="0" width="100%" height="100%" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+            </div>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
