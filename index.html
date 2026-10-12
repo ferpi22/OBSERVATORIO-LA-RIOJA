@@ -19,8 +19,8 @@
         </div>
         <ul class="nav-links">
             <li class="active" onclick="switchTab('home')"><i class="fa-solid fa-house"></i> Inicio</li>
-            <li onclick="switchTab('dashboard')"><i class="fa-solid fa-map-location-dot"></i> Mapa Departamental</li>
-            <li onclick="switchTab('mapas-tematicos')"><i class="fa-solid fa-layer-group"></i> Mapas Temáticos</li>
+            <li onclick="switchTab('dashboard')"><i class="fa-solid fa-map-location-dot"></i> Territorio</li>
+            <li onclick="switchTab('salud')"><i class="fa-solid fa-notes-medical"></i> Salud Pública</li>
         </ul>
         <div class="update-info">
             <p>Última actualización:</p>
@@ -66,7 +66,7 @@
         <section id="tab-dashboard" class="tab-content">
             <div class="dashboard-header">
                 <h2>Análisis Departamental Interactiva</h2>
-                <p>Toca cualquier departamento sobre el mapa oficial para ver sus datos.</p>
+                <p>Toca cualquier departamento sobre el mapa oficial para ver sus datos sociodemográficos.</p>
             </div>
             
             <div class="dashboard-layout">
@@ -183,48 +183,64 @@
             </div>
         </section>
 
-        <!-- TAB: MAPAS TEMÁTICOS -->
-        <section id="tab-mapas-tematicos" class="tab-content">
+        <!-- TAB: SALUD PÚBLICA -->
+        <section id="tab-salud" class="tab-content">
             <div class="dashboard-header">
-                <h2>Mapas Temáticos de la Ciudad y Jurisdicciones</h2>
-                <p>Haz clic en los mapas para visualizarlos en pantalla completa.</p>
+                <h2>Monitor de Salud Pública</h2>
+                <p>Indicadores epidemiológicos y estadísticas vitales por departamento.</p>
             </div>
             
-            <div class="maps-gallery">
-                <div class="map-card" onclick="openMapModal('Distribución por Zona', 'ciudad de la rioja por zona.jpg')">
-                    <img src="ciudad de la rioja por zona.jpg" alt="Zonas" onerror="this.src='https://via.placeholder.com/300x200/9b7ede/ffffff?text=Mapa+Zonas'">
-                    <h3>Distribución por Zona</h3>
-                    <p>Zonificación principal de la ciudad (Norte, Sur, Este, Oeste, Centro).</p>
+            <div class="quick-stats" style="margin-bottom: 30px;">
+                <div class="stat-card" style="border-left: 5px solid var(--c-red);">
+                    <i class="fa-solid fa-baby" style="color: var(--c-red);"></i>
+                    <h3>Mortandad Infantil</h3>
+                    <h2 id="salud-prov-mort">8.7‰</h2>
+                    <p>Por cada 1.000 nacidos vivos</p>
                 </div>
-                
-                <div class="map-card" onclick="openMapModal('Distribución por Barrios 2025', 'ciudad de la rioja por barrios 2025.jpg')">
-                    <img src="ciudad de la rioja por barrios 2025.jpg" alt="Barrios" onerror="this.src='https://via.placeholder.com/300x200/6a4c9c/ffffff?text=Mapa+Barrios'">
-                    <h3>Distribución por Barrios 2025</h3>
-                    <p>Mapa detallado de todos los barrios de la Capital de La Rioja.</p>
+                <div class="stat-card" style="border-left: 5px solid var(--c-orange);">
+                    <i class="fa-solid fa-ribbon" style="color: var(--c-orange);"></i>
+                    <h3>Casos de VIH</h3>
+                    <h2 id="salud-prov-vih">193</h2>
+                    <p>Casos registrados</p>
                 </div>
+                <div class="stat-card" style="border-left: 5px solid var(--c-purple);">
+                    <i class="fa-solid fa-virus-covid" style="color: var(--c-purple);"></i>
+                    <h3>Casos de Sífilis</h3>
+                    <h2 id="salud-prov-sifilis">561</h2>
+                    <p>Infecciones de Transmisión Sexual</p>
+                </div>
+                <div class="stat-card" style="border-left: 5px solid var(--text-muted);">
+                    <i class="fa-solid fa-head-side-virus" style="color: var(--text-muted);"></i>
+                    <h3>Suicidios</h3>
+                    <h2 id="salud-prov-suicidios">31</h2>
+                    <p>Casos registrados</p>
+                </div>
+            </div>
 
-                <div class="map-card" onclick="openMapModal('Jurisdicciones Policiales', 'jurisdicciones policiales.jpg')">
-                    <img src="jurisdicciones policiales.jpg" alt="Policiales" onerror="this.src='https://via.placeholder.com/300x200/e5dcf5/3a2e4a?text=Mapa+Policial'">
-                    <h3>Jurisdicciones Policiales</h3>
-                    <p>División de las comisarías y áreas de cobertura en la ciudad.</p>
+            <div class="data-panel" style="padding: 0; overflow: hidden;">
+                <div class="panel-header" style="padding: 20px 30px; margin-bottom: 0; background: var(--bg-main);">
+                    <h2 style="font-size: 1.2rem;">Detalle Epidemiológico por Departamento</h2>
+                </div>
+                <div class="table-responsive">
+                    <table class="health-table">
+                        <thead>
+                            <tr>
+                                <th>Departamento</th>
+                                <th>Tasa Mortalidad Infantil (‰)</th>
+                                <th>Casos VIH</th>
+                                <th>Casos Sífilis</th>
+                                <th>Suicidios</th>
+                            </tr>
+                        </thead>
+                        <tbody id="health-table-body">
+                            <!-- JS Populated -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
 
     </main>
-
-    <!-- Modal Visor de Imágenes -->
-    <div id="image-modal" class="modal-overlay" onclick="closeMapModal()">
-        <div class="modal-content image-viewer" onclick="event.stopPropagation()">
-            <div class="modal-header">
-                <h2 id="modal-title">Mapa</h2>
-                <button class="close-btn" onclick="closeMapModal()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="modal-body">
-                <img id="modal-img-src" src="" alt="Mapa Completo" style="width: 100%; height: auto; object-fit: contain; max-height: 80vh;">
-            </div>
-        </div>
-    </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>

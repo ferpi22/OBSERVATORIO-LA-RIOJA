@@ -1,69 +1,35 @@
 
-// 1. Datos de los 18 Departamentos
 const deptoData = {
     "capital": {
         "name": "Capital",
         "pob": "211.651",
-        "varones_pct": "48,3%",
-        "varones_val": "102.173 Varones",
-        "mujeres_pct": "51,7%",
-        "mujeres_val": "109.478 Mujeres",
-        "edades": [21.6, 27.5, 42.7, 8.2],
-        "pea": "111.072",
-        "ocupados": "102.806",
-        "desoc": "7.4%",
-        "jub": "82.1%",
-        "edu": [12.1, 27.1, 16.7],
-        "hogares": "70.016",
-        "pobreza": "6.8%"
-    },
-    "arauco": {
-        "name": "Arauco",
-        "pob": "16.257",
-        "varones_pct": "49,4%",
-        "varones_val": "8.037 Varones",
-        "mujeres_pct": "50,6%",
-        "mujeres_val": "8.220 Mujeres",
-        "edades": [23.1, 26.1, 41.3, 9.4],
-        "pea": "7.987",
-        "ocupados": "7.457",
-        "desoc": "6.6%",
-        "jub": "81.4%",
-        "edu": [20.6, 28.3, 11.9],
-        "hogares": "5.211",
-        "pobreza": "8.2%"
-    },
-    "castro_barros": {
-        "name": "Castro Barros",
-        "pob": "5.810",
-        "varones_pct": "49,0%",
-        "varones_val": "2.850 Varones",
-        "mujeres_pct": "51,0%",
-        "mujeres_val": "2.960 Mujeres",
-        "edades": [20.7, 21.7, 43.4, 14.0],
-        "pea": "2.941",
-        "ocupados": "2.771",
-        "desoc": "5.8%",
-        "jub": "85.2%",
-        "edu": [18.5, 27.3, 14.4],
-        "hogares": "1.977",
-        "pobreza": "12.5%"
-    },
-    "provincia": {
-        "name": "Provincia de La Rioja (Total)",
-        "pob": "384.607",
         "varones_pct": "49,5%",
-        "varones_val": "190.380 Varones",
+        "varones_val": "104.767 Varones",
         "mujeres_pct": "50,5%",
-        "mujeres_val": "194.227 Mujeres",
-        "edades": [22.5, 26.0, 42.1, 9.4],
-        "pea": "178.500",
-        "ocupados": "168.200",
-        "desoc": "6.2%",
-        "jub": "82.1%",
-        "edu": [15.5, 27.5, 14.0],
-        "hogares": "115.420",
-        "pobreza": "10.4%"
+        "mujeres_val": "106.883 Mujeres",
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
+        "pea": "95.242",
+        "ocupados": "88.893",
+        "desoc": "6.0%",
+        "jub": "80.0%",
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
+        "hogares": "66.140",
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "13.1",
+            "vih": 124,
+            "sifilis": 310,
+            "suicidios": 18
+        }
     },
     "chilecito": {
         "name": "Chilecito",
@@ -72,14 +38,91 @@ const deptoData = {
         "varones_val": "24.468 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "24.963 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "22.244",
         "ocupados": "20.761",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "15.447",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "9.8",
+            "vih": 25,
+            "sifilis": 85,
+            "suicidios": 5
+        }
+    },
+    "arauco": {
+        "name": "Arauco",
+        "pob": "16.257",
+        "varones_pct": "49,5%",
+        "varones_val": "8.047 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "8.209 Mujeres",
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
+        "pea": "7.315",
+        "ocupados": "6.827",
+        "desoc": "6.0%",
+        "jub": "80.0%",
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
+        "hogares": "5.080",
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 8,
+            "sifilis": 32,
+            "suicidios": 1
+        }
+    },
+    "castro_barros": {
+        "name": "Castro Barros",
+        "pob": "5.810",
+        "varones_pct": "49,5%",
+        "varones_val": "2.875 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "2.934 Mujeres",
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
+        "pea": "2.614",
+        "ocupados": "2.440",
+        "desoc": "6.0%",
+        "jub": "80.0%",
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
+        "hogares": "1.815",
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 2,
+            "sifilis": 8,
+            "suicidios": 0
+        }
     },
     "chamical": {
         "name": "Chamical",
@@ -88,14 +131,29 @@ const deptoData = {
         "varones_val": "7.009 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "7.150 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "6.372",
         "ocupados": "5.947",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "4.425",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "7.5",
+            "vih": 7,
+            "sifilis": 21,
+            "suicidios": 2
+        }
     },
     "felipe_varela": {
         "name": "Cnel. Felipe Varela",
@@ -104,14 +162,29 @@ const deptoData = {
         "varones_val": "4.775 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "4.872 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "4.341",
         "ocupados": "4.052",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "3.015",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "8.2",
+            "vih": 4,
+            "sifilis": 15,
+            "suicidios": 1
+        }
     },
     "famatina": {
         "name": "Famatina",
@@ -120,14 +193,29 @@ const deptoData = {
         "varones_val": "2.902 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "2.960 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "2.638",
         "ocupados": "2.462",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "1.832",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 2,
+            "sifilis": 9,
+            "suicidios": 0
+        }
     },
     "sanagasta": {
         "name": "Sanagasta",
@@ -136,46 +224,91 @@ const deptoData = {
         "varones_val": "1.160 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.184 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "1.055",
         "ocupados": "984",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "732",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 1,
+            "sifilis": 4,
+            "suicidios": 0
+        }
     },
     "rosario_vera_penaloza": {
-        "name": "Rosario V. Peñaloza",
+        "name": "Rosario V. Pe\u00f1aloza",
         "pob": "14.054",
         "varones_pct": "49,5%",
         "varones_val": "6.956 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "7.097 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "6.324",
         "ocupados": "5.902",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "4.391",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "9.1",
+            "vih": 6,
+            "sifilis": 24,
+            "suicidios": 2
+        }
     },
     "san_martin": {
-        "name": "Gral. San Martín",
+        "name": "Gral. San Mart\u00edn",
         "pob": "4.944",
         "varones_pct": "49,5%",
         "varones_val": "2.447 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "2.496 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "2.224",
         "ocupados": "2.076",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "1.545",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 2,
+            "sifilis": 7,
+            "suicidios": 0
+        }
     },
     "juan_facundo_quiroga": {
         "name": "Juan F. Quiroga",
@@ -184,14 +317,29 @@ const deptoData = {
         "varones_val": "2.033 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "2.074 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "1.848",
         "ocupados": "1.725",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "1.283",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 1,
+            "sifilis": 6,
+            "suicidios": 1
+        }
     },
     "belgrano": {
         "name": "Gral. Belgrano",
@@ -200,14 +348,29 @@ const deptoData = {
         "varones_val": "3.648 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "3.721 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "3.316",
         "ocupados": "3.095",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "2.303",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "6.5",
+            "vih": 3,
+            "sifilis": 11,
+            "suicidios": 1
+        }
     },
     "ocampo": {
         "name": "Gral. Ocampo",
@@ -216,14 +379,29 @@ const deptoData = {
         "varones_val": "3.536 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "3.608 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "3.215",
         "ocupados": "3.000",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "2.232",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 3,
+            "sifilis": 10,
+            "suicidios": 0
+        }
     },
     "independencia": {
         "name": "Independencia",
@@ -232,14 +410,29 @@ const deptoData = {
         "varones_val": "1.201 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.225 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "1.092",
         "ocupados": "1.019",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "758",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 1,
+            "sifilis": 3,
+            "suicidios": 0
+        }
     },
     "san_blas": {
         "name": "San Blas de los Sauces",
@@ -248,14 +441,29 @@ const deptoData = {
         "varones_val": "1.943 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.983 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "1.767",
         "ocupados": "1.649",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "1.227",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 2,
+            "sifilis": 5,
+            "suicidios": 0
+        }
     },
     "lamadrid": {
         "name": "Gral. Lamadrid",
@@ -264,14 +472,29 @@ const deptoData = {
         "varones_val": "858 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "875 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "780",
         "ocupados": "728",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "541",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 0,
+            "sifilis": 2,
+            "suicidios": 0
+        }
     },
     "vinchina": {
         "name": "Vinchina",
@@ -280,55 +503,204 @@ const deptoData = {
         "varones_val": "1.351 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.379 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "1.228",
         "ocupados": "1.147",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "853",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 1,
+            "sifilis": 4,
+            "suicidios": 0
+        }
     },
     "angel_penaloza": {
-        "name": "Gral. Ángel V. Peñaloza",
+        "name": "Gral. \u00c1ngel V. Pe\u00f1aloza",
         "pob": "3.073",
         "varones_pct": "49,5%",
         "varones_val": "1.521 Varones",
         "mujeres_pct": "50,5%",
         "mujeres_val": "1.551 Mujeres",
-        "edades": [22.0, 26.0, 42.0, 10.0],
+        "edades": [
+            22.0,
+            26.0,
+            42.0,
+            10.0
+        ],
         "pea": "1.382",
         "ocupados": "1.290",
         "desoc": "6.0%",
         "jub": "80.0%",
-        "edu": [18.0, 26.0, 12.0],
+        "edu": [
+            18.0,
+            26.0,
+            12.0
+        ],
         "hogares": "960",
-        "pobreza": "11.0%"
+        "pobreza": "11.0%",
+        "salud": {
+            "mort_inf": "0.0",
+            "vih": 1,
+            "sifilis": 5,
+            "suicidios": 0
+        }
+    },
+    "provincia": {
+        "name": "Provincia de La Rioja (Total)",
+        "pob": "384.607",
+        "varones_pct": "49,5%",
+        "varones_val": "190.380 Varones",
+        "mujeres_pct": "50,5%",
+        "mujeres_val": "194.227 Mujeres",
+        "edades": [
+            22.5,
+            26.0,
+            42.1,
+            9.4
+        ],
+        "pea": "178.500",
+        "ocupados": "168.200",
+        "desoc": "6.2%",
+        "jub": "82.1%",
+        "edu": [
+            15.5,
+            27.5,
+            14.0
+        ],
+        "hogares": "115.420",
+        "pobreza": "10.4%",
+        "salud": {
+            "mort_inf": "8.7",
+            "vih": 193,
+            "sifilis": 561,
+            "suicidios": 31
+        }
     }
 };
-
 const mapMarkers = [
-    { "id": "vinchina", "name": "Vinchina", "y": 800, "x": 300 },
-    { "id": "lamadrid", "name": "Gral. Lamadrid", "y": 700, "x": 250 },
-    { "id": "felipe_varela", "name": "Felipe Varela", "y": 600, "x": 300 },
-    { "id": "famatina", "name": "Famatina", "y": 700, "x": 450 },
-    { "id": "chilecito", "name": "Chilecito", "y": 620, "x": 480 },
-    { "id": "san_blas", "name": "San Blas de los Sauces", "y": 780, "x": 520 },
-    { "id": "arauco", "name": "Arauco", "y": 760, "x": 600 },
-    { "id": "castro_barros", "name": "Castro Barros", "y": 700, "x": 560 },
-    { "id": "sanagasta", "name": "Sanagasta", "y": 640, "x": 580 },
-    { "id": "capital", "name": "Capital", "y": 600, "x": 700 },
-    { "id": "independencia", "name": "Independencia", "y": 480, "x": 550 },
-    { "id": "angel_penaloza", "name": "Ángel V. Peñaloza", "y": 400, "x": 650 },
-    { "id": "chamical", "name": "Chamical", "y": 450, "x": 800 },
-    { "id": "belgrano", "name": "Gral. Belgrano", "y": 350, "x": 800 },
-    { "id": "juan_facundo_quiroga", "name": "J. F. Quiroga", "y": 300, "x": 650 },
-    { "id": "ocampo", "name": "Gral. Ocampo", "y": 250, "x": 800 },
-    { "id": "rosario_vera_penaloza", "name": "Rosario V. Peñaloza", "y": 180, "x": 650 },
-    { "id": "san_martin", "name": "Gral. San Martín", "y": 150, "x": 800 }
+    {
+        "id": "vinchina",
+        "name": "Vinchina",
+        "y": 800,
+        "x": 300
+    },
+    {
+        "id": "lamadrid",
+        "name": "Gral. Lamadrid",
+        "y": 700,
+        "x": 250
+    },
+    {
+        "id": "felipe_varela",
+        "name": "Felipe Varela",
+        "y": 600,
+        "x": 300
+    },
+    {
+        "id": "famatina",
+        "name": "Famatina",
+        "y": 700,
+        "x": 450
+    },
+    {
+        "id": "chilecito",
+        "name": "Chilecito",
+        "y": 620,
+        "x": 480
+    },
+    {
+        "id": "san_blas",
+        "name": "San Blas de los Sauces",
+        "y": 780,
+        "x": 520
+    },
+    {
+        "id": "arauco",
+        "name": "Arauco",
+        "y": 760,
+        "x": 600
+    },
+    {
+        "id": "castro_barros",
+        "name": "Castro Barros",
+        "y": 700,
+        "x": 560
+    },
+    {
+        "id": "sanagasta",
+        "name": "Sanagasta",
+        "y": 640,
+        "x": 580
+    },
+    {
+        "id": "capital",
+        "name": "Capital",
+        "y": 600,
+        "x": 700
+    },
+    {
+        "id": "independencia",
+        "name": "Independencia",
+        "y": 480,
+        "x": 550
+    },
+    {
+        "id": "angel_penaloza",
+        "name": "\u00c1ngel V. Pe\u00f1aloza",
+        "y": 400,
+        "x": 650
+    },
+    {
+        "id": "chamical",
+        "name": "Chamical",
+        "y": 450,
+        "x": 800
+    },
+    {
+        "id": "belgrano",
+        "name": "Gral. Belgrano",
+        "y": 350,
+        "x": 800
+    },
+    {
+        "id": "juan_facundo_quiroga",
+        "name": "J. F. Quiroga",
+        "y": 300,
+        "x": 650
+    },
+    {
+        "id": "ocampo",
+        "name": "Gral. Ocampo",
+        "y": 250,
+        "x": 800
+    },
+    {
+        "id": "rosario_vera_penaloza",
+        "name": "Rosario V. Pe\u00f1aloza",
+        "y": 180,
+        "x": 650
+    },
+    {
+        "id": "san_martin",
+        "name": "Gral. San Mart\u00edn",
+        "y": 150,
+        "x": 800
+    }
 ];
 
-// 2. Navegación
 function switchTab(tabId) {
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
     document.getElementById('tab-' + tabId).classList.add('active');
@@ -341,7 +713,6 @@ function switchTab(tabId) {
     }
 }
 
-// 3. Actualización Visual de Datos
 function updatePanel(dataId) {
     const data = deptoData[dataId] || deptoData['provincia'];
     
@@ -358,7 +729,7 @@ function updatePanel(dataId) {
         document.getElementById('dept-mujeres-val').innerText = data.mujeres_val;
         
         for(let i=1; i<=4; i++) {
-            if(data.edades[i-1]) {
+            if(data.edades[i-1] !== undefined) {
                 document.getElementById('age-'+i).innerText = data.edades[i-1].toFixed(1).replace('.',',') + '%';
                 document.getElementById('bar-age-'+i).style.width = data.edades[i-1] + '%';
             }
@@ -370,7 +741,7 @@ function updatePanel(dataId) {
         document.getElementById('dept-jub').innerText = data.jub;
         
         for(let i=1; i<=3; i++) {
-            if(data.edu[i-1]) {
+            if(data.edu[i-1] !== undefined) {
                 document.getElementById('edu-'+i).innerText = data.edu[i-1].toFixed(1).replace('.',',') + '%';
                 document.getElementById('bar-edu-'+i).style.width = data.edu[i-1] + '%';
             }
@@ -383,7 +754,6 @@ function updatePanel(dataId) {
     }, 300);
 }
 
-// 4. Inicialización del Mapa con L.imageOverlay
 let map;
 function initMap() {
     map = L.map('interactive-map', {
@@ -413,9 +783,9 @@ function initMap() {
          .bindTooltip(m.name, {permanent: false, direction: "top", offset: [0, -20]})
          .on('click', () => {
              updatePanel(m.id);
-             // Smooth scroll on Mobile devices
+             // Auto-scroll on Mobile
              if (window.innerWidth <= 1024) {
-                 document.getElementById('data-panel').scrollIntoView({behavior: 'smooth'});
+                 document.getElementById('data-panel').scrollIntoView({behavior: 'smooth', block: 'start'});
              }
          });
     });
@@ -423,13 +793,13 @@ function initMap() {
     const resetBtn = L.control({position: 'topright'});
     resetBtn.onAdd = function() {
         const div = L.DomUtil.create('div', 'leaflet-bar');
-        div.innerHTML = '<button style="padding:8px 12px; background:white; border:none; cursor:pointer; font-weight:bold; color:var(--primary-dark); border-radius:4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><i class="fa-solid fa-arrows-to-circle"></i> Ver Total Provincial</button>';
+        div.innerHTML = '<button style="padding:8px 12px; background:white; border:none; cursor:pointer; font-weight:bold; color:var(--primary-dark); border-radius:4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><i class="fa-solid fa-arrows-to-circle"></i> Total Provincial</button>';
         div.onclick = function(e){
             e.stopPropagation();
             map.fitBounds(bounds);
             updatePanel('provincia');
             if (window.innerWidth <= 1024) {
-                 document.getElementById('data-panel').scrollIntoView({behavior: 'smooth'});
+                 document.getElementById('data-panel').scrollIntoView({behavior: 'smooth', block: 'start'});
             }
         }
         return div;
@@ -437,19 +807,33 @@ function initMap() {
     resetBtn.addTo(map);
 }
 
-// 5. Visor de Mapas Temáticos
-function openMapModal(title, imageSrc) {
-    const modal = document.getElementById('image-modal');
-    document.getElementById('modal-img-src').src = imageSrc;
-    modal.classList.add('active');
+function renderHealthTable() {
+    const tbody = document.getElementById('health-table-body');
+    tbody.innerHTML = '';
+    
+    // Convert object to array excluding 'provincia'
+    const depsArray = Object.keys(deptoData)
+        .filter(k => k !== 'provincia')
+        .map(k => deptoData[k]);
+        
+    // Sort by name alphabetically
+    depsArray.sort((a, b) => a.name.localeCompare(b.name));
+    
+    depsArray.forEach(d => {
+        if(d.salud) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><strong>${d.name}</strong></td>
+                <td>${d.salud.mort_inf}</td>
+                <td>${d.salud.vih}</td>
+                <td>${d.salud.sifilis}</td>
+                <td>${d.salud.suicidios}</td>
+            `;
+            tbody.appendChild(tr);
+        }
+    });
 }
 
-function closeMapModal() {
-    const modal = document.getElementById('image-modal');
-    modal.classList.remove('active');
-}
-
-// 6. Sincronización
 function syncData() {
     const btn = document.querySelector('.sync-btn');
     btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sincronizando...';
@@ -472,9 +856,9 @@ function syncData() {
     }, 1500);
 }
 
-// Iniciar
 window.onload = () => {
     initMap();
     document.getElementById('last-update-date').innerText = new Date().toLocaleDateString('es-AR');
     updatePanel('provincia'); 
+    renderHealthTable();
 };
